@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './NotificationForm.css'; // Make sure to create this CSS file
+import './NotificationForm.css';
 
 const NotificationForm: React.FC = () => {
   const [supervisors, setSupervisors] = useState<string[]>([]);
@@ -16,10 +16,26 @@ const NotificationForm: React.FC = () => {
   useEffect(() => {
     const fetchSupervisors = async () => {
       try {
-        const response = await axios.get<string[]>('/api/supervisors');
-        setSupervisors(response.data);
+        const response = await axios.get('http://localhost:4000/api/supervisors');
+        if (response.data && Array.isArray(response.data)) {
+          const formattedSupervisors = response.data
+            .filter(supervisor => isNaN(supervisor.jurisdiction)) // Filter out numeric jurisdictions
+            .map(supervisor => `${supervisor.jurisdiction} - ${supervisor.lastName}, ${supervisor.firstName}`)
+            .sort((a, b) => {
+              const [jurisdictionA, lastNameA, firstNameA] = a.split(/ - |, /);
+              const [jurisdictionB, lastNameB, firstNameB] = b.split(/ - |, /);
+              return jurisdictionA.localeCompare(jurisdictionB) ||
+                     lastNameA.localeCompare(lastNameB) ||
+                     firstNameA.localeCompare(firstNameB);
+            });
+          setSupervisors(formattedSupervisors);
+        } else {
+          console.error('Invalid data format:', response.data);
+          setSupervisors([]);
+        }
       } catch (error) {
         console.error('Error fetching supervisors:', error);
+        setSupervisors([]);
       }
     };
 

@@ -14,10 +14,6 @@ public class Supervisor {
         return jurisdiction;
     }
 
-    public void setJurisdiction() {
-        this.jurisdiction = jurisdiction;
-    }
-
     public String getFirstName() {
         return firstName;
     }
