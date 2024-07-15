@@ -11,6 +11,5 @@ This is the backend microservice for the Supervisor Management Notification modu
 
 ## How to Run
 
-1. Build the Docker image:
-   ```bash
-   docker build -t supervisor-backend .
+1. ./mvnw clean install
+2. ./mvnw spring-boot:run

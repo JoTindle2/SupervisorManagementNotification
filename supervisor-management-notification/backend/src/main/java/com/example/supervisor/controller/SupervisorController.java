@@ -20,7 +20,7 @@ public class SupervisorController {
     public List<String> getSupervisors() {
         return supervisorService.getAllSupervisors();
     }
-
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/submit")
         public ResponseEntity<String> submitNotification(@RequestBody Supervisor request) {
             // Validate required fields

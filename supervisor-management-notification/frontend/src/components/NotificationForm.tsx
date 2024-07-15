@@ -16,7 +16,7 @@ const NotificationForm: React.FC = () => {
   useEffect(() => {
     const fetchSupervisors = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/supervisors');
+        const response = await axios.get("https://o3m5qixdng.execute-api.us-east-1.amazonaws.com/api/managers");
         if (response.data && Array.isArray(response.data)) {
           const formattedSupervisors = response.data
             .filter(supervisor => isNaN(supervisor.jurisdiction)) // Filter out numeric jurisdictions
