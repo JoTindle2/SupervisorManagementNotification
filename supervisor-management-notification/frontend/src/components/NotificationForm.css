@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d3d3d3;
+  }
+  
+  .form-container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #b0c4de;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h1 {
+    background-color: #708090;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin: -20px -20px 20px -20px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  .questionLabel {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 25px;
+    text-align: left;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-row .form-group {
+    flex: 0 0 48%;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-group select {
+    width: 60%;
+    padding: 5px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .checkbox-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 48%;
+  }
+  
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .checkbox-group input[type="email"],
+  .checkbox-group input[type="tel"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .supervisor-group {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .supervisor-group label {
+    text-align: left;
+    padding-left: 101px;
+  }
+  
+  button {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #708090;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #5f7a7f;
+  }
+  
+  p {
+    text-align: center;
+    color: red;
+  }
+    
