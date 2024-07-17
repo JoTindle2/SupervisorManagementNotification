@@ -32,7 +32,7 @@ Make sure Docker is installed and running on your machine. You can download Dock
     ```
 ## Without Docker
 
-# Backend
+### Backend
 
 2. Build the backend
     `./mvnw clean install`
@@ -40,7 +40,7 @@ Make sure Docker is installed and running on your machine. You can download Dock
 3. Start the backend
     `./mvnw spring-boot:run`
 
-# Frontend
+### Frontend
 4. Install Dependencies
     `npm install`
 
@@ -78,7 +78,7 @@ Make sure Docker is installed and running on your machine. You can download Dock
 - `GET /api/supervisors`: Returns a JSON array of all supervisors.
 - `POST /api/submit`: Accepts a request for a new notification request for a supervisor.
 
-## Frontend
+### Frontend
 
 - The frontend provides a form to submit supervisor notifications and displays error messages for any invalid requests.
 
